@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NewGrudge from './NewGrudge';
 import Grudges from './Grudges';
 import './Application.css';
+import { withAuthenticator } from 'aws-amplify-react'
 
 class Application extends Component {
   state = {
@@ -51,4 +52,4 @@ class Application extends Component {
   }
 }
 
-export default Application;
+export default withAuthenticator (Application);
